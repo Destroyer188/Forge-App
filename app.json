@@ -1,0 +1,63 @@
+{
+  "expo": {
+    "name": "Forge",
+    "slug": "forge-fitness",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "scheme": "forge",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.forge",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Forge uses your photo library to attach progress photos to workout logs.",
+        "NSCameraUsageDescription": "Forge uses your camera to take progress photos.",
+        "NSFaceIDUsageDescription": "Forge uses Face ID to protect your personal fitness data.",
+        "NSCalendarsUsageDescription": "Forge uses your calendar to export your weekly gym plan."
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.example.forge",
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.READ_CALENDAR",
+        "android.permission.WRITE_CALENDAR"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#111111"
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "configureAndroidBackup": true,
+          "faceIDPermission": "Allow Forge to use Face ID to unlock your private fitness data."
+        }
+      ],
+      "expo-image-picker",
+      "expo-document-picker",
+      "expo-local-authentication",
+      "expo-calendar",
+      "expo-status-bar"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0ddbbe03-9068-48dc-94a9-c300a7dffd64"
+      }
+    },
+    "owner": "destroyer188"
+  }
+}
